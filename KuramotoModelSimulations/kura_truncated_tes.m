@@ -1,4 +1,4 @@
----CODE SAMPLE. A FAILED TEST FOR STARTING KURAMOTO MODEL SIMULATIONS AT THE MOMENT BEFORE SYNCHRONIZATION TO LIMIT COMPUTATIONAL TIME AND STOARGE ---
+%%%CODE SAMPLE. A FAILED TEST FOR STARTING KURAMOTO MODEL SIMULATIONS AT THE MOMENT BEFORE SYNCHRONIZATION TO LIMIT COMPUTATIONAL TIME AND STORAGE
 
 datapath = 'C:\Kura_Orstd_truncated_test\';
 sig_datapath = 'D:\Joe\Zauberbaum\DataGeneration\BetterKuraResults\Kura_sig_truncated_test\';
@@ -192,4 +192,3 @@ for fig = 1:size(Or_data_reshaped,1)
     plot(K_vec(Ki_start:end), Or_data_reshaped(fig,:))
     hold on
 end
-
