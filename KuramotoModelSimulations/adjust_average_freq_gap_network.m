@@ -1,6 +1,4 @@
----CODE SAMPLE. THIS CREATES A NETWORK OF COUPLED OSCILLATORS USING THE 'TARGET FREQUENCY GAP' PARAMETER.---
-
-
+%%%CODE SAMPLE. THIS CREATES A NETWORK OF COUPLED OSCILLATORS USING THE 'TARGET FREQUENCY GAP' PARAMETER
 
 
 sizeMAT=100;
@@ -93,48 +91,43 @@ for FG = 1:length(target_FG)
 %%MAKE FIGURES TO CHECK IF IT LOOKS LIKE THE PAPER'S FIGURES 
 
 
-%     saveas(gcf,sprintf('%sfigure_target_FG=%.3f.png',savepath, target_FG(FG)))
+     saveas(gcf,sprintf('%sfigure_target_FG=%.3f.png',savepath, target_FG(FG)))
 end
 
-%     title(['FIGURE FOR FG = ' num2str(target_FG(FG))])
-%  
-%         subplot(length(target_FG),2,(2*FG)-1)
-%         scatter(W_save(iter_no,:),sum(MAT(:,:,iter_no)),Marker = '.', MarkerFaceColor="g")
-%         hold on
-%         xlim([1.001 2])
-%         title([' CDF =' num2str(target_FG(FG))])
-%         xlabel('Natural Frequency')
-%         ylabel('Degree')
-%         set(gca,'fontname', 'times new roman')
-% %         set(gca, 'XTick', []);
-% %         set(gca, 'YTick', []);
-% %         set(gca, 'XTickLabel', []);
-% %         set(gca, 'YTickLabel', []);
-% 
-%         %subplot(2,num_iterations,num_iterations+iter_no)
-%         subplot(length(target_FG),2,2*FG)
-%         %make frequency to average frequency plot
-%         d = zeros(size(MAT,1),1);
-%         for a = 1:size(MAT,1)
-%             b = MAT(a,:,iter_no);
-%             c = b .* W_save(iter_no,:);
-%             d(a) = sum(c) / sum(b);
-%         end
-%         scatter(W_save(iter_no,:),d, marker ='.')
-%         xlim([1.001 2])
-%         title(['FA ' num2str(target_FG(FG))])
-%         xlabel('Natural Frequency')
-%         ylabel('Neighborhood Frequency')
-%         set(gca, 'fontname', 'times new roman')
-% %         set(gca, 'XTick', []);
-% %         set(gca, 'YTick', []);
-% %         set(gca, 'XTickLabel', []);
-% %         set(gca, 'YTickLabel', []);
+     title(['FIGURE FOR FG = ' num2str(target_FG(FG))])
+  
+         subplot(length(target_FG),2,(2*FG)-1)
+         scatter(W_save(iter_no,:),sum(MAT(:,:,iter_no)),Marker = '.', MarkerFaceColor="g")
+         hold on
+         xlim([1.001 2])
+         title([' CDF =' num2str(target_FG(FG))])
+         xlabel('Natural Frequency')
+         ylabel('Degree')
+         set(gca,'fontname', 'times new roman')
+         set(gca, 'XTick', []);
+         set(gca, 'YTick', []);
+         set(gca, 'XTickLabel', []);
+         set(gca, 'YTickLabel', []);
+ 
+         %subplot(2,num_iterations,num_iterations+iter_no)
+         subplot(length(target_FG),2,2*FG)
+         %make frequency to average frequency plot
+         d = zeros(size(MAT,1),1);
+         for a = 1:size(MAT,1)
+             b = MAT(a,:,iter_no);
+             c = b .* W_save(iter_no,:);
+             d(a) = sum(c) / sum(b);
+         end
+         scatter(W_save(iter_no,:),d, marker ='.')
+         xlim([1.001 2])
+         title(['FA ' num2str(target_FG(FG))])
+         xlabel('Natural Frequency')
+         ylabel('Neighborhood Frequency')
+         set(gca, 'fontname', 'times new roman')
+         set(gca, 'XTick', []);
+         set(gca, 'YTick', []);
+         set(gca, 'XTickLabel', []);
+         set(gca, 'YTickLabel', []);
 
-%     saveas(gcf,sprintf('%sfigure_target_FG=%.3f.png',savepath, target_FG(FG)))
-
-
-
-
-
+     saveas(gcf,sprintf('%sfigure_target_FG=%.3f.png',savepath, target_FG(FG)))
 
