@@ -1,3 +1,6 @@
+##Completed first SYK two-point simulation. Now, OTOC calculations are non-trivial but achievable from here. Regardless, great start. 
+##Perfoming first tests with sparse arrays for performance increases. 
+
 import numpy as np
 import scipy.sparse
 import scipy.linalg as linalg
