@@ -1,2 +1,2 @@
 # Portfolio
-Scripts that generated results in the portfolio are included. There is also a folder 'BeginSYKsimulations', a current project comparing two-point correlation functions and out-of-time-order correlators for the SYK model using normal and non-normal distributions of standard 4-fermion interaction coupling. 
+Three of the folders above contain scripts that generated results in the portfolio. The folder 'BeginSYKsimulations' is a current project comparing two-point correlation functions and out-of-time-order correlators for the SYK model using normal and non-normal distributions of standard 4-fermion interaction coupling. 
