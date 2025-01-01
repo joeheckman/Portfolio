@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 
-N_maj = 10
+N_maj = 12
 
 
 ##find dtype=complex is the homework problem
