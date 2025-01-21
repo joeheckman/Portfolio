@@ -1,11 +1,9 @@
 """
 Create Majoranas
 """
-
-#guessing here boys easy does it
 import numpy as np
 
-N_maj = 20 ##trivially simple (haha dick)
+N_maj = 20 ##desired number of Majoranas for sufficiently robust simulations. 
 
 ##find dtype=complex is the homework problem
 op_size = 2**(N_maj/2)
@@ -53,6 +51,7 @@ for i in range(int(N_maj/2)-1,-1,-1):
 
 
 ##test clifford algebras
+##if they're good we have created matrices satisfying the definition 
 clif_test_1 = np.zeros((int(N_maj/2),int(op_size),int(op_size)),dtype=complex)
 clif_test_2 = np.zeros((int(N_maj/2),int(N_maj/2),int(op_size),int(op_size)),dtype=complex)
 clif_test_1_odd = np.zeros((int(N_maj/2),int(op_size),int(op_size)),dtype=complex)
@@ -61,9 +60,10 @@ clif_test_2_odd = np.zeros((int(N_maj/2),int(N_maj/2),int(op_size),int(op_size))
 for test in range(0,int(N_maj/2)):
     clif_test_1[test,:,:] = np.dot(chiEven_loop[test,:,:],chiEven_loop[test,:,:])+np.dot(chiEven_loop[test,:,:],chiEven_loop[test,:,:]) ##test for correct construction
     clif_test_1_odd[test,:,:] = np.dot(chiOdd_loop[test,:,:],chiOdd_loop[test,:,:])+np.dot(chiOdd_loop[test,:,:],chiOdd_loop[test,:,:])
-##hold on
+
 for p in range(0,int(N_maj/2)):
     for q in range(0,int(N_maj/2)):
         clif_test_2[p,q,:,:] = np.dot(chiEven_loop[p,:,:],chiEven_loop[q,:,:])+np.dot(chiEven_loop[q,:,:],chiEven_loop[p,:,:]) ##test for correct construction
+        
         ##clif_test_2_odd[p,q,:,:] satisfies clif_test_1 when p = q, therefore the 2$\delta_{ij}$
         clif_test_2_odd[p,q,:,:] = np.dot(chiOdd_loop[p,:,:],chiOdd_loop[q,:,:])+np.dot(chiOdd_loop[q,:,:],chiOdd_loop[p,:,:])
