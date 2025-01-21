@@ -1,3 +1,4 @@
+##visualize. See the last figure in 'SYK_Explorations.pdf' for the result.  
 import numpy as np
 import scipy.linalg as linalg
 from scipy.sparse import csr_matrix,vstack,kron, save_npz, load_npz
